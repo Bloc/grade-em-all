@@ -1,0 +1,17 @@
+{
+    "name": "Grade 'em all",
+    "version": "1.0",
+    "description": "Opens all links waiting to be graded.",
+    "browser_action": {
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+        "js": [ "jquery-3.3.1.min.js", "content.js"],
+        "matches": [ "*://bloc.io/*grader=My_Claimed_Submissions"]
+    }],
+    "permissions": ["*://bloc.io/*grader=My_Claimed_Submissions", "activeTab", "tabs"],
+    "manifest_version": 2
+  }
